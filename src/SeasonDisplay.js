@@ -13,7 +13,11 @@ const SeasonDisplay = (props) => {
 
   console.log(season);
 
-  return <div>Season Display</div>;
+  return (
+    <div>
+      { season==='winter' ? 'Burr, it is chilly' : 'Let\'s hit the beach'}
+    </div>
+  );
 }
 
 export default SeasonDisplay;
