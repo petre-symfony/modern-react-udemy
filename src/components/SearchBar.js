@@ -3,7 +3,7 @@ import React from 'react';
 class SearchBar extends React.Component {
   state = {term: ''}
 
-  onFormSubmit = (event) => {
+  onFormSubmit(event) {
     event.preventDefault();
 
     console.log(this.state.term);
@@ -14,7 +14,7 @@ class SearchBar extends React.Component {
 
     return (
       <div className="ui segment">
-        <form onSubmit={this.onFormSubmit} className="ui form">
+        <form onSubmit={(e) => this.onFormSubmit(e)} className="ui form">
           <div className="field">
             <label>Image Search</label>
             <input
