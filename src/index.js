@@ -25,10 +25,11 @@ class App extends React.Component {
       return <SeasonDisplay lat={this.state.lat}/>
     }
 
-    return <Spinner/>
+    return <Spinner />
 
   }
 }
+
 ReactDom.render(
   <App />,
   document.querySelector('#root')
