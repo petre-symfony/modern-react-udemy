@@ -2,6 +2,7 @@ import React from 'react';
 import SearchBar from './SearchBar';
 import youtube from "../api/youtube";
 import VideoList from "./VideoList";
+import VideoDetail from "./VideoDetail";
 
 const KEY = "AIzaSyCQFn1lBZgX50rQWr8Aw9-HUNhd4_CLpes";
 
@@ -9,7 +10,7 @@ class App extends React.Component {
   state = { videos: [], selectedVideo: null  };
 
   onVideoSelect = (video) => {
-    console.log('From the App', video);
+    this.setState({selectedVideo: video});
   }
 
   onTermSubmit = async term => {
@@ -30,6 +31,7 @@ class App extends React.Component {
     return (
       <div className="ui container">
         <SearchBar onFormSubmit={this.onTermSubmit} />
+        <VideoDetail video={this.state.selectedVideo} />
         <VideoList
           onVideoSelect={this.onVideoSelect}
           videos={this.state.videos}
