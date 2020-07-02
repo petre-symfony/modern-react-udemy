@@ -9,6 +9,10 @@ const KEY = "AIzaSyCQFn1lBZgX50rQWr8Aw9-HUNhd4_CLpes";
 class App extends React.Component {
   state = { videos: [], selectedVideo: null  };
 
+  componentDidMount() {
+    this.onTermSubmit('buildings');
+  }
+
   onVideoSelect = (video) => {
     this.setState({selectedVideo: video});
   }
@@ -24,7 +28,10 @@ class App extends React.Component {
       }
     });
 
-    this.setState({videos: response.data.items});
+    this.setState({
+      videos: response.data.items,
+      selectedVideo: response.data.items[0]
+    });
   }
 
   render(){
