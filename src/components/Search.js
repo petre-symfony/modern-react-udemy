@@ -4,10 +4,10 @@ const Search = () => {
   const [term, setTerm] = useState('');
 
   console.log('I run eith every render');
-  
+
   useEffect(() => {
-    console.log('I only run once')
-  }, []);
+    console.log('I run after every render and initial render')
+  });
 
   return (
     <div>
