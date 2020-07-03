@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const Search = () => {
-  const [term, setTerm] = useState('');
+  const [term, setTerm] = useState('programming');
   const [results, setResults] = useState([]);
 
   console.log(results);
@@ -22,10 +22,7 @@ const Search = () => {
       setResults(data);
     }
 
-    if(term){
-      search();
-    }
-    
+    search();
   }, [term]);
 
   return (
