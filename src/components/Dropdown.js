@@ -9,7 +9,7 @@ const Dropdown = ({ options, selected, onSelectedChange }) => {
       if(ref.current.contains(event.target)){
         return;
       }
-      
+
       setOpen(false);
     });
   }, []);
