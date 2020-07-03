@@ -6,8 +6,12 @@ const Search = () => {
 
   console.log('I run eith every render');
 
-  useEffect(async () => {
-    await axios('I run after every render and initial render')
+  useEffect(() => {
+    const search = async () => {
+      await axios.get('xyz')
+    }
+
+    search()
   }, [term]);
 
   return (
