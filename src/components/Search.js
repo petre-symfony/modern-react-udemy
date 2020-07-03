@@ -34,7 +34,7 @@ const Search = () => {
       }
     }
 
-  }, [term]);
+  }, [term, results.length]);
 
   const renderedResults = results.map(result => {
     return (
