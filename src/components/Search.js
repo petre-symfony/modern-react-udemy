@@ -6,7 +6,6 @@ const Search = () => {
   const [results, setResults] = useState([]);
 
   useEffect(() => {
-    /*
     const search = async () => {
       const { data } = await axios.get('https://en.wikipedia.org/w/api.php', {
         params: {
@@ -25,12 +24,10 @@ const Search = () => {
       if(term){
         search();
       }
-    }, 500);
-    */
-    console.log('Initial render or term was changed');
+    }, 1000);
 
     return () => {
-      console.log('CLEANUP');
+      clearTimeout(timeoutId);
     }
   }, [term]);
 
