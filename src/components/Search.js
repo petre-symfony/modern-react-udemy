@@ -20,9 +20,12 @@ const Search = () => {
       setResults(data.query.search);
     }
 
-    if(term){
-      search();
-    }
+    setTimeout(() => {
+      if(term){
+        search();
+      }
+    }, 500);
+
   }, [term]);
 
   const renderedResults = results.map(result => {
