@@ -7,11 +7,11 @@ const Search = () => {
   console.log('I run eith every render');
 
   useEffect(() => {
-    axios.get('xyz')
-      .then((response) => {
-        console.log(response);
-      })
+    const search = async () => {
+      await axios.get('xyz')
+    }
 
+    search();
   }, [term]);
 
   return (
