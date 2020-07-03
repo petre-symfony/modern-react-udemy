@@ -7,7 +7,7 @@ const Search = () => {
 
   useEffect(() => {
     console.log('I run after every render and initial render')
-  });
+  }, [term]);
 
   return (
     <div>
