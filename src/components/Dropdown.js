@@ -16,7 +16,7 @@ const Dropdown = ({ options, selected, onSelectedChange }) => {
     document.body.addEventListener('click', onBodyClick);
 
     console.log('After render or rerender');
-    
+
     return () => {
       document.body.removeEventListener('click', onBodyClick);
     };
