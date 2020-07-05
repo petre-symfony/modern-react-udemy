@@ -10,10 +10,6 @@ const App = () => {
   const [videos, setVideos] = useState([]);
   const [ selectedVideo, setSelectedVideo ] = useState(null);
 
-  const onVideoSelect = (video) => {
-    setSelectedVideo(video);
-  }
-
   const onTermSubmit = async term => {
     const response = await youtube.get('/search', {
       params: {
@@ -43,7 +39,7 @@ const App = () => {
           </div>
           <div className="five wide column">
             <VideoList
-              onVideoSelect={onVideoSelect}
+              onVideoSelect={video => setSelectedVideo(video)}
               videos={videos}
             />
           </div>
