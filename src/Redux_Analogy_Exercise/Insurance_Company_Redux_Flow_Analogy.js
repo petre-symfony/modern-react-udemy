@@ -72,7 +72,13 @@ const ourDepartments = combineReducers({
 
 const store = createStore(ourDepartments);
 
-const action = CreatePolicy('Alex', 20);
+store.dispatch(CreatePolicy('Alex', 20));
+store.dispatch(CreatePolicy('Jim', 30));
+store.dispatch(CreatePolicy('Bob', 40));
 
-store.dispatch(action);
+store.dispatch(CreateClaim('Alex', 120));
+store.dispatch(CreateClaim('Jim', 50));
+
+store.dispatch(DeletePolicy('Bob'));
+
 console.log(store.getState());
