@@ -7,27 +7,8 @@ import VideoDetail from "./VideoDetail";
 const KEY = "AIzaSyCQFn1lBZgX50rQWr8Aw9-HUNhd4_CLpes";
 
 const App = () => {
-  const [videos, setVideos] = useState([]);
   const [ selectedVideo, setSelectedVideo ] = useState(null);
-
-  const onTermSubmit = async term => {
-    const response = await youtube.get('/search', {
-      params: {
-        q: term,
-        part: 'snippet',
-        maxResults: 5,
-        key: KEY,
-        type: 'video'
-      }
-    });
-
-    setVideos(response.data.items);
-    setSelectedVideo(response.data.items[0]);
-  }
-
-  useEffect(() => {
-    onTermSubmit('buildings') ;
-  }, []);
+  //setSelectedVideo(response.data.items[0]);
 
   return (
     <div className="ui container">
