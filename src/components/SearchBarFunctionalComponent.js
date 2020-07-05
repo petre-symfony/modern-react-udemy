@@ -3,10 +3,6 @@ import React, { useState } from 'react';
 const SearchBarFunctionalComponent = ({ onFormSubmit }) => {
   const [ term, setTerm ] = useState('');
 
-  const onInputChange = (event) => {
-    setTerm(event.target.value);
-  }
-
   const onSubmit = (e) => {
     e.preventDefault();
 
@@ -22,7 +18,7 @@ const SearchBarFunctionalComponent = ({ onFormSubmit }) => {
           <input
             type="text"
             value={term}
-            onChange={onInputChange}
+            onChange={e => setTerm(e.target.value)}
           />
         </div>
       </form>
