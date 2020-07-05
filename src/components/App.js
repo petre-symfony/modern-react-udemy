@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import SearchBarFunctionalComponent from './SearchBarFunctionalComponent';
-import youtube from "../api/youtube";
 import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
 import useVideos from "../hooks/useVideos";
