@@ -3,16 +3,19 @@ import SearchBarFunctionalComponent from './SearchBarFunctionalComponent';
 import youtube from "../api/youtube";
 import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
-
-const KEY = "AIzaSyCQFn1lBZgX50rQWr8Aw9-HUNhd4_CLpes";
+import useVideos from "../hooks/useVideos";
 
 const App = () => {
   const [ selectedVideo, setSelectedVideo ] = useState(null);
-  //setSelectedVideo(response.data.items[0]);
+  const [ videos, search ] = useVideos('buildings');
+
+  useEffect(() => {
+    setSelectedVideo(videos[0]) ;
+  }, [ videos ]);
 
   return (
     <div className="ui container">
-      <SearchBarFunctionalComponent onFormSubmit={onTermSubmit} />
+      <SearchBarFunctionalComponent onFormSubmit={ search } />
       <div className="ui grid">
         <div className="ui row">
           <div className="eleven wide column">
