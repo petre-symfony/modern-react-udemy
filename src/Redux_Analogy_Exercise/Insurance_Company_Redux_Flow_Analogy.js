@@ -26,7 +26,7 @@ const CreateClaim = (name, amountOfMoneyToCollect) => {
     type: "CREATE_CLAIM",
     payload: {
       name: name,
-      amount: amountOfMoneyToCollect
+      amountOfMoneyToCollect: amountOfMoneyToCollect
     }
   }
 }
@@ -46,7 +46,7 @@ const accounting = (bagOfMoney = 100, action) => {
   if (action.type === 'CREATE_CLAIM'){
     return bagOfMoney - action.payload.amountOfMoneyToCollect;
   } else if (action.type === 'CREATE_POLICY') {
-    return bagOfMoney + action.payload.amount
+    return bagOfMoney + action.payload.amount;
   }
 
   return bagOfMoney;
@@ -65,7 +65,7 @@ const policies = (listOfPolicies = [], action) => {
 const { createStore, combineReducers } = Redux;
 
 const ourDepartments = combineReducers({
-  accounting: accounting,
+  moneyWeHave: accounting,
   claimsHistory: claimsHistory,
   policies: policies
 });
