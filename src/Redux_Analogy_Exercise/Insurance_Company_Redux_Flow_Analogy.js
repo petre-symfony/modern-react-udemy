@@ -61,3 +61,18 @@ const policies = (listOfPolicies = [], action) => {
 
   return listOfPolicies;
 }
+
+const { createStore, combineReducers } = Redux;
+
+const ourDepartments = combineReducers({
+  accounting: accounting,
+  claimsHistory: claimsHistory,
+  policies: policies
+});
+
+const store = createStore(ourDepartments);
+
+const action = CreatePolicy('Alex', 20);
+
+store.dispatch(action);
+console.log(store.getState());
