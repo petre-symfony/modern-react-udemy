@@ -65,7 +65,7 @@ const policies = (listOfPolicies = [], action) => {
 const { createStore, combineReducers } = Redux;
 
 const ourDepartments = combineReducers({
-  moneyWeHave: accounting,
+  accounting: accounting,
   claimsHistory: claimsHistory,
   policies: policies
 });
