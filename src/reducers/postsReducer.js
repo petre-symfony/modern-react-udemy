@@ -1,10 +1,7 @@
-export default (state, action) => {
-  // bad !!! all of them
-  state[0] = 'Sam';
-  state.pop()
-  state.push();
+export default (state = [], action) => {
+  if (action.type === 'FETCH_POSTS'){
+    return action.payload;
+  }
 
-  // bad !!! all of them
-  state.name = 'Sam';
-  state.age = 30;
+  return state;
 }
