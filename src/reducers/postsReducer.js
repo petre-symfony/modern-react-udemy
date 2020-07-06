@@ -1,3 +1,3 @@
 export default () => {
-  return undefined;
+  return 123;
 }
