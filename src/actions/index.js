@@ -1,7 +1,6 @@
 import jsonPlaceholder from "../apis/jsonPlaceholder";
 
 export const fetchPost = async () => {
-  // Bad approach!!!
   const response = await jsonPlaceholder.get('/posts');
 
   return {
