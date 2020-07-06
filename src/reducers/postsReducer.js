@@ -1,10 +1,10 @@
-export default () => {
-  // bad !!!
-  return document.querySelector('input');
+export default (state, action) => {
+  // bad !!! all of them
+  state[0] = 'Sam';
+  state.pop()
+  state.push();
 
-  //bad
-  return axios.get('/posts');
-
-  //good
-  return state + action;
+  // bad !!! all of them
+  state.name = 'Sam';
+  state.age = 30;
 }
