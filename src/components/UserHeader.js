@@ -8,8 +8,14 @@ class UserHeader extends Component {
   }
 
   render(){
+    const user = this.props.users.find(user => user.id === this.props.userId);
+
+    if (!user) {
+      return null;
+    }
+
     return (
-      <div>User Header</div>
+      <div className="header">{ user.name }</div>
     )
   }
 }
