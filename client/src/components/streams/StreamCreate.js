@@ -63,7 +63,7 @@ const validate = (formValues) => {
   return errors;
 }
 
-export default reduxForm({
+export default connect()(reduxForm({
   form: 'streamCreate',
   validate
-})(StreamCreate);
+})(StreamCreate));
