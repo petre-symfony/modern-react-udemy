@@ -3,8 +3,12 @@ import { Field, reduxForm } from "redux-form";
 
 class StreamCreate extends Component {
   render(){
-    console.log(this.props);
-    return <div>StreamCreate</div>
+    return (
+      <form>
+        <Field name="title"/>
+        <Field name="description"/>
+      </form>
+    )
   }
 }
 
