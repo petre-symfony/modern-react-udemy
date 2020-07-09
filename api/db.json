@@ -9,6 +9,12 @@
       "title": "Other Stream",
       "description": "Grose",
       "id": 2
+    },
+    {
+      "title": "I created this stream",
+      "description": "Mine",
+      "userId": "103785271567553910186",
+      "id": 3
     }
   ]
 }
