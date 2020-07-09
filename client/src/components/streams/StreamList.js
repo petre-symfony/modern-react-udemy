@@ -22,6 +22,12 @@ class StreamList extends React.Component {
     }
   }
 
+  renderCreate(){
+    if(stream.userId === this.props.currentUserId){
+      
+    }
+  }
+
   renderList(){
     return this.props.streams.map(stream => {
       return (
