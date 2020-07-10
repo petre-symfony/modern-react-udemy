@@ -20,6 +20,12 @@ class StreamDelete extends React.Component {
   }
 
   render() {
+    if(!this.props.stream){
+      return (
+        <div>Loading...</div>
+      )
+    }
+
     return (
       <div>
         StreamDelete
