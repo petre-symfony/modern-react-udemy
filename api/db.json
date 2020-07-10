@@ -24,12 +24,6 @@
       "title": "Streaming reuse",
       "description": "This stream is about reusing",
       "id": 5
-    },
-    {
-      "title": "uuid",
-      "description": "edit uuid with patch",
-      "userId": "103785271567553910186",
-      "id": 6
     }
   ]
 }
