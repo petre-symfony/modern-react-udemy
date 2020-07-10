@@ -12,20 +12,24 @@
     },
     {
       "title": "I created this stream",
-      "description": "Mine",
-      "userId": "103785271567553910186",
+      "description": "Mine patch",
       "id": 3
     },
     {
       "title": "Programatic navigation",
-      "description": "Programatic",
-      "userId": "103785271567553910186",
+      "description": "This change was made by a patch",
       "id": 4
     },
     {
       "title": "Streaming reuse",
       "description": "This stream is about reusing",
       "id": 5
+    },
+    {
+      "title": "uuid",
+      "description": "edit uuid with patch",
+      "userId": "103785271567553910186",
+      "id": 6
     }
   ]
 }
